@@ -6,6 +6,12 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $font-family;
+  color: $text-color-white;
+  background-color: $background-color-main;
 }
 
 img {

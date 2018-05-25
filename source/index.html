@@ -13,9 +13,9 @@
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <input class="toggle visually-hidden" id="slider-1" type="radio" name="slider" checked>
-    <input class="toggle visually-hidden" id="slider-2" type="radio" name="slider">
-    <input class="toggle visually-hidden" id="slider-3" type="radio" name="slider">
+    <input class="visually-hidden" id="slider-1" type="radio" name="slider" checked>
+    <input class="visually-hidden" id="slider-2" type="radio" name="slider">
+    <input class="visually-hidden" id="slider-3" type="radio" name="slider">
     <div class="site-wrapper">
       <header class="page-header">
         <a class="page-header__logo">
@@ -24,7 +24,7 @@
         <nav class="main-nav">
           <ul class="main-nav__site">
             <li class="main-nav__site-item">
-              <a class="main-nav__site-link" href="#">Каталог</a>
+              <a class="main-nav__site-link" href="#"><span class="main-nav__site-link-decoration">Каталог</span></a>
               <ul class="menu-hover main-nav__menu-hover">
                 <li class="menu-hover__item menu-hover__item--header">
                   <a class="menu-hover__item-link" href="#">Новинки</a>
@@ -44,10 +44,10 @@
               </ul>
             </li>
             <li class="main-nav__site-item">
-              <a class="main-nav__site-link" href="#">Доставка и оплата</a>
+              <a class="main-nav__site-link" href="#"><span class="main-nav__site-link-decoration">Доставка и оплата</span></a>
             </li>
             <li class="main-nav__site-item">
-              <a class="main-nav__site-link" href="#">О Компании</a>
+              <a class="main-nav__site-link" href="#"><span class="main-nav__site-link-decoration">О Компании</span></a>
             </li>
           </ul>
           <ul class="main-nav__user">
@@ -56,7 +56,7 @@
                 <svg class="main-nav__search-image" width="17" height="17"><use xlink:href="#loupe"></use></svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
-              <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="post">
+              <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-request">Что ищем?</label>
                 <input class="main-nav__search-input" id="search-request" type="text" name="search-request" placeholder="Что ищем?">
               </form>

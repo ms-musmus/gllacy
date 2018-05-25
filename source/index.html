@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <!-- <div style="display:none">
+    <div style="display:none">
       <include src="build/img/sprite.svg"></include>
-    </div> -->
+    </div>
     <input class="toggle visually-hidden" id="slider-1" type="radio" name="slider" checked>
     <input class="toggle visually-hidden" id="slider-2" type="radio" name="slider">
     <input class="toggle visually-hidden" id="slider-3" type="radio" name="slider">
     <div class="site-wrapper">
       <header class="page-header">
         <a class="page-header__logo">
-          <img class="page-header__logo-image" src="" width="154" height="64" alt="GllacyShop">
+          <img class="page-header__logo-image" src="img/logo.svg" width="154" height="64" alt="GllacyShop">
         </a>
         <nav class="main-nav">
           <ul class="main-nav__site">
@@ -52,16 +52,25 @@
           </ul>
           <ul class="main-nav__user">
             <li class="main-nav__user-item">
-              <a class="main-nav__user-link" href="#"><span class="visually-hidden">Поиск</span></a>
+              <a class="main-nav__user-link" href="#">
+                <svg class="main-nav__search-image" width="17" height="17"><use xlink:href="#loupe"></use></svg>
+                <span class="visually-hidden">Поиск</span>
+              </a>
               <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="post">
-                <input class="main-nav__search-input" type="text" name="search-request" placeholder="Что ищем?">
+                <label class="visually-hidden" for="search-request">Что ищем?</label>
+                <input class="main-nav__search-input" id="search-request" type="text" name="search-request" placeholder="Что ищем?">
               </form>
             </li>
             <li class="main-nav__user-item">
-              <a class="main-nav__user-link" href="#">Вход</a>
+              <a class="main-nav__user-link" href="#">
+                <svg class="main-nav__login-image" width="21" height="19"><use xlink:href="#entrance"></use></svg>
+                Вход
+              </a>
               <form class="main-nav__login" action="https://echo.htmlacademy.ru" method="post">
-                <input class="main-nav__login-input" type="email" name="login-email" placeholder="Электронная почта">
-                <input class="main-nav__login-input" type="password" name="login-password" placeholder="Пароль">
+                <label class="visually-hidden" for="login-email">Электронная почта</label>
+                <input class="main-nav__login-input" id="login-email" type="email" name="login-email" placeholder="Электронная почта">
+                <label class="visually-hidden" for="login-password">Пароль</label>
+                <input class="main-nav__login-input" id="login-password" type="password" name="login-password" placeholder="Пароль">
                 <div class="main-nav__login-wrapper">
                   <button class="button main-nav__login-button" type="submit">Войти</button>
                   <a class="main-nav__login-link" href="#">Забыли пароль?</a>
@@ -125,7 +134,7 @@
           <h2 class="visually-hidden">Хиты продаж</h2>
           <section class="bestsellers__item">
             <div class="bestsellers__item-wrapper">
-              <img class="bestsellers__item-image" src="" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <img class="bestsellers__item-image" src="img/item1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <p class="bestsellers__item-price">
                 310&#8381;/<span class="bestsellers__item-small">кг</span>
               </p>
@@ -135,7 +144,7 @@
           </section>
           <section class="bestsellers__item">
             <div class="bestsellers__item-wrapper">
-              <img class="bestsellers__item-image" src="" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              <img class="bestsellers__item-image" src="img/item2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               <p class="bestsellers__item-price">
                 380&#8381;/<span class="bestsellers__item-small">кг</span>
               </p>
@@ -145,7 +154,7 @@
           </section>
           <section class="bestsellers__item">
             <div class="bestsellers__item-wrapper">
-              <img class="bestsellers__item-image" src="" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <img class="bestsellers__item-image" src="img/item3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <p class="bestsellers__item-price">
                 355&#8381;/<span class="bestsellers__item-small">кг</span>
               </p>
@@ -155,7 +164,7 @@
           </section>
           <section class="bestsellers__item">
             <div class="bestsellers__item-wrapper">
-              <img class="bestsellers__item-image" src="" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+              <img class="bestsellers__item-image" src="img/item4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
               <p class="bestsellers__item-price">
                 415&#8381;/<span class="bestsellers__item-small">кг</span>
               </p>
@@ -191,6 +200,7 @@
               Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
             </p>
             <form class="mailing__form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="mailing-email">Электронная почта</label>
               <input class="mailing__input" type="email" name="mailing-email" placeholder="Электронная почта">
               <button class="button mailing__button" type="submit">Отправить</button>
             </form>
@@ -219,25 +229,25 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__item-link social__item-link--twitter" href="#">
-                <svg class="social__link-image" width="32" height="32"><use xlink:href="#twitter-icon"></use></svg>
+                <svg class="social__link-image" width="32" height="32"><use xlink:href="#twitter"></use></svg>
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__item-link social__item-link--insta" href="#">
-                <svg class="social__link-image" width="32" height="32"><use xlink:href="#insta-icon"></use></svg>
+                <svg class="social__link-image" width="32" height="32"><use xlink:href="#instagram"></use></svg>
                 <span class="visually-hidden">Инстаграм</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__item-link social__item-link--fb" href="#">
-                <svg class="social__link-image" width="32" height="32"><use xlink:href="#fb-icon"></use></svg>
+                <svg class="social__link-image" width="32" height="32"><use xlink:href="#fb"></use></svg>
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__item-link social__item-link--vk" href="#">
-                <svg class="social__link-image" width="32" height="32"><use xlink:href="#vk-icon"></use></svg>
+                <svg class="social__link-image" width="32" height="32"><use xlink:href="#vk"></use></svg>
                 <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
@@ -255,7 +265,7 @@
         </div>
         <div class="copyright page-footer__copyright">
           <a class="copyright__link" href="https://htmlacademy.ru">
-            <svg class="copyright__link-image" width="108" height="39"><use xlink:href="#htmlacademy"></use></svg>
+            <img class="copyright__link-image" src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy"></img>
           </a>
           <p class="copyright__text">
             Сделано в <a class="copyright__text-link" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017
@@ -270,9 +280,18 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-        <input class="modal__input" type="text" name="feedback-name" placeholder="Как вас зовут?">
-        <input class="modal__input" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
-        <textarea class="modal__textarea" name="feedback-content" placeholder="Напишите что-нибудь..."></textarea>
+        <p class="modal__wrapper">
+          <label class="modal__label" for="feedback-name">Как вас зовут?</label>
+          <input class="modal__input" id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
+        </p>
+        <p class="modal__wrapper">
+          <label class="modal__label" for="feedback-email">Ваша почта для ответа?</label>
+          <input class="modal__input" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p class="modal__wrapper">
+          <label class="modal__label" for="feedback-content">Напишите что-нибудь...</label>
+          <textarea class="modal__textarea" name="feedback-content" placeholder="Напишите что-нибудь..."></textarea>
+        </p>
         <button class="button modal__button" type="submit">Отправить</button>
       </form>
     </section>

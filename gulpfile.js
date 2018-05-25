@@ -56,9 +56,9 @@ gulp.task("images", function () {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-             .pipe(posthtml([
-               include()
-             ]))
+             // .pipe(posthtml([
+             //   include()
+             // ]))
              .pipe(gulp.dest("build"));
 });
 

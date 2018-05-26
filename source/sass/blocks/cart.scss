@@ -1,0 +1,28 @@
+.cart {
+  width: 539px;
+  padding: 20px 14px 21px 15px;
+  font-size: 13px;
+  line-height: 16px;
+  color: $text-color-dark;
+  background-color: $background-color-form;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cart__item-table {
+  border-bottom: 1px solid #cacac7;
+}
+
+.cart__item-price {
+  color: $text-color-form;
+}
+
+.cart__summary {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.cart__button {
+  width: 170px;
+}

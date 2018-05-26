@@ -20,25 +20,27 @@
         </a>
         <nav class="main-nav">
           <ul class="main-nav__site">
-            <li class="main-nav__site-item">
+            <li class="main-nav__site-item main-nav__site-item--catalog">
               <a class="main-nav__site-link main-nav__site-link--active" href="#"><span class="main-nav__site-link-decoration">Каталог</span></a>
-              <ul class="menu-hover main-nav__menu-hover">
-                <li class="menu-hover__item menu-hover__item--header">
-                  <a class="menu-hover__item-link" href="#">Новинки</a>
-                </li>
-                <li class="menu-hover__item">
-                  <a class="menu-hover__item-link menu-hover__item-link--active">Сливочное</a>
-                </li>
-                <li class="menu-hover__item">
-                  <a class="menu-hover__item-link" href="#">Щербеты</a>
-                </li>
-                <li class="menu-hover__item">
-                  <a class="menu-hover__item-link" href="#">Фруктовый лед</a>
-                </li>
-                <li class="menu-hover__item">
-                  <a class="menu-hover__item-link" href="#">Мелорин</a>
-                </li>
-              </ul>
+              <div class="main-nav__wrapper main-nav__wrapper--menu">
+                <ul class="menu-hover main-nav__menu-hover main-nav__menu-hover--catalog">
+                  <li class="menu-hover__item">
+                    <a class="menu-hover__item-link menu-hover__item-link--header">Новинки</a>
+                  </li>
+                  <li class="menu-hover__item">
+                    <a class="menu-hover__item-link menu-hover__item-link--active">Сливочное</a>
+                  </li>
+                  <li class="menu-hover__item">
+                    <a class="menu-hover__item-link" href="#">Щербеты</a>
+                  </li>
+                  <li class="menu-hover__item">
+                    <a class="menu-hover__item-link" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="menu-hover__item">
+                    <a class="menu-hover__item-link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="main-nav__site-item">
               <a class="main-nav__site-link" href="#"><span class="main-nav__site-link-decoration">Доставка и оплата</span></a>
@@ -48,71 +50,79 @@
             </li>
           </ul>
           <ul class="main-nav__user">
-            <li class="main-nav__user-item">
-              <a class="main-nav__user-link" href="#">
+            <li class="main-nav__user-item main-nav__user-item--search">
+              <a class="main-nav__user-link main-nav__user-link--search" href="#">
                 <svg class="main-nav__search-image" width="17" height="17"><use xlink:href="#loupe"></use></svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
-              <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="get">
-                <input class="main-nav__search-input" type="text" name="search-request" placeholder="Что ищем?">
-              </form>
+              <div class="main-nav__wrapper">
+                <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="get">
+                  <input class="main-nav__search-input" type="text" name="search-request" placeholder="Что ищем?">
+                </form>
+              </div>
             </li>
-            <li class="main-nav__user-item">
-              <a class="main-nav__user-link" href="#">
+            <li class="main-nav__user-item main-nav__user-item--login">
+              <a class="main-nav__user-link main-nav__user-link--login" href="#">
                 <svg class="main-nav__login-image" width="21" height="19"><use xlink:href="#entrance"></use></svg>
                 Вход
               </a>
-              <form class="main-nav__login" action="https://echo.htmlacademy.ru" method="post">
-                <input class="main-nav__login-input" type="email" name="login-email" placeholder="Электронная почта">
-                <input class="main-nav__login-input" type="password" name="login-password" placeholder="Пароль">
-                <div class="main-nav__login-wrapper">
-                  <button class="button main-nav__login-button" type="submit">Войти</button>
-                  <a class="main-nav__login-link" href="#">Забыли пароль?</a>
-                  <a class="main-nav__login-link" href="#">Новая регистрация</a>
-                </div>
-              </form>
+              <div class="main-nav__wrapper main-nav__wrapper--login">
+                <form class="main-nav__login" action="https://echo.htmlacademy.ru" method="post">
+                  <input class="main-nav__login-input" type="email" name="login-email" placeholder="Электронная почта">
+                  <input class="main-nav__login-input" type="password" name="login-password" placeholder="Пароль">
+                  <div class="main-nav__login-wrapper">
+                    <button class="button main-nav__login-button" type="submit">Войти</button>
+                    <div class="main-nav__login-link-wrapper">
+                      <a class="main-nav__login-link" href="#">Забыли пароль?</a>
+                      <a class="main-nav__login-link" href="#">Новая регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </li>
-            <li class="main-nav__user-item">
-              <a class="main-nav__user-link" href="#">2 товара</a>
-              <section class="cart main-nav__cart">
-                <h2 class="visually-hidden">Корзина</h2>
-                <table class="cart__item-table">
-                  <tr class="cart__item">
-                    <td class="cart__item-left">
-                      <button class="cart__item-remove"><span class="visually-hidden">Удалить из корзины</span></button>
-                      <img class="cart__item-image" src="img/item1-small.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                    </td>
-                    <td class="cart__item-title">
-                      Пломбир с апельсиновым джемом
-                    </td>
-                    <td class="cart__item-value">
-                      1,5 кг &times; <span class="cart__item-price">200 руб.</span>
-                    </td>
-                    <td class="cart__item-sum">
-                      300 руб.
-                    </td>
-                  </tr>
-                  <tr class="cart__item">
-                    <td class="cart__item-left">
-                      <button class="cart__item-remove"><span class="visually-hidden">Удалить из корзины</span></button>
-                      <img class="cart__item-image" src="img/item2-small.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
-                    </td>
-                    <td class="cart__item-title">
-                      Клубничный пломбир с присыпкой из белого шоколада
-                    </td>
-                    <td class="cart__item-value">
-                      1,5 кг &times; <span class="cart__item-price">300 руб.</span>
-                    </td>
-                    <td class="cart__item-sum">
-                      450 руб.
-                    </td>
-                  </tr>
-                </table>
-                <div class="cart__summary">
-                  Итого: 750 руб.
-                </div>
-                <a class="button cart__button" href="#">Оформить заказ</a>
-              </section>
+            <li class="main-nav__user-item main-nav__user-item--cart">
+              <a class="main-nav__user-link main-nav__user-link--cart main-nav__user-link--cart-full" href="#">2 товара</a>
+              <div class="main-nav__wrapper">
+                <section class="cart main-nav__cart">
+                  <h2 class="visually-hidden">Корзина</h2>
+                  <table class="cart__item-table">
+                    <tr class="cart__item">
+                      <td class="cart__item-left">
+                        <button class="cart__item-remove"><span class="visually-hidden">Удалить из корзины</span></button>
+                        <img class="cart__item-image" src="img/item1-small.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                      </td>
+                      <td class="cart__item-title">
+                        Пломбир с апельсиновым джемом
+                      </td>
+                      <td class="cart__item-value">
+                        1,5 кг &times; <span class="cart__item-price">200 руб.</span>
+                      </td>
+                      <td class="cart__item-sum">
+                        300 руб.
+                      </td>
+                    </tr>
+                    <tr class="cart__item">
+                      <td class="cart__item-left">
+                        <button class="cart__item-remove"><span class="visually-hidden">Удалить из корзины</span></button>
+                        <img class="cart__item-image" src="img/item2-small.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                      </td>
+                      <td class="cart__item-title">
+                        Клубничный пломбир с присыпкой из белого шоколада
+                      </td>
+                      <td class="cart__item-value">
+                        1,5 кг &times; <span class="cart__item-price">300 руб.</span>
+                      </td>
+                      <td class="cart__item-sum">
+                        450 руб.
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="cart__summary">
+                    Итого: 750 руб.
+                  </div>
+                  <a class="button cart__button" href="#">Оформить заказ</a>
+                </section>
+              </div>
             </li>
           </ul>
         </nav>

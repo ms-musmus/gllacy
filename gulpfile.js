@@ -6,7 +6,7 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var minify = require("gulp-csso");
+var minify = require("gulp-clean-css");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var posthtml = require("gulp-posthtml");
@@ -24,7 +24,7 @@ gulp.task("style", function () {
         autoprefixer()
       ]))
       .pipe(gulp.dest("build/css"))
-      .pipe(minify())
+      .pipe(minify({compatibility: 'ie11'}))
       .pipe(rename("style.min.css"))
       .pipe(gulp.dest("build/css"))
       .pipe(server.stream());

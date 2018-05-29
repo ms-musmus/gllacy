@@ -1,6 +1,29 @@
 .site-wrapper {
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.site-wrapper__container {
+  width: 100%;
   min-width: $min-width;
   max-width: $max-width;
   margin: 0 auto;
 }
+
+/* stylelint-disable selector-max-id  */
+#slider-1:checked ~ .site-wrapper {
+  background-color: $background-color-main;
+  background-image: url("/img/slide1.png");
+}
+
+#slider-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("/img/slide2.png");
+}
+
+#slider-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("/img/slide3.png");
+}
+/* stylelint-enable */

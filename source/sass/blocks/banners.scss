@@ -1,0 +1,68 @@
+.banners {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banners__item {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  min-height: 229px;
+  padding: 15px 21px 24px 19px;
+  border-radius: 15px;
+
+  /* Фикс бага в IE11: почему-то некорректно
+  работает justify-content: space-between */
+  &:nth-of-type(2n+1) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+  }
+
+  &--raspberry {
+    background-color: #b4314f;
+    background-image: url("/img/bg-raspberry.png");
+  }
+
+  &--chocolate {
+    background-color: #341b0f;
+    background-image: url("/img/bg-chocolate.png");
+  }
+}
+
+.banners__item-title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.banners__item-description {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.banners__item-button {
+  align-self: flex-end;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 9px;
+  padding-bottom: 13px;
+  border-radius: 23px;
+  box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
+
+  &--raspberry {
+    width: 165px;
+  }
+
+  &--chocolate {
+    width: 189px;
+  }
+}
